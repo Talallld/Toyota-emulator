@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>الصفحة الرئيسية - وكالة تويوتا</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="slider.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html" class="active">الرئيسية</a></li>
+          <li><a href="register.html">التسجيل</a></li>
+          <li><a href="cars.html">سياراتنا</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="gbs.html">موقعنا</a></li>
+        </ul>
+      </nav>
+
+      <a class="brand" href="index.html" aria-label="وكالة تويوتا">
+        <img src="Toyota_logo_(Red).svg" alt="Toyota" class="brand-logo">
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="heor-slider">
+      <div class="slides">
+        <div class="slide active">
+          <img src="images\hero1.jpg" alt="Toyota Supra GR">
+        </div>
+        <div class="slide">
+          <img src="images\hero2.jpg" alt="Land Cruiser Prado">
+        </div>
+        <div class="slide">
+          <img src="images\hero3.jpg" alt="Toyota Corolla">
+        </div>
+      </div>
+
+      <button class="arrow left" onclick="nextSlide()">&#10095;</button>
+      <button class="arrow right" onclick="prevSlide()">&#10094;</button>
+
+      <div class="dots">
+        
+      </div>
+    </section>
+
+    <section class="home-benefits">
+      <div class="container">
+        <h2 class="home-benefits-title">مزايا وكالتنا</h2>
+
+        <div class="home-benefits-grid">
+          <div class="benefit-card">
+            <div class="benefit-icon">1</div>
+            <h3>خدمة سريعة</h3>
+            <p>استقبال منظم ومواعيد صيانة منجزة في أقصر وقت ممكن.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">2</div>
+            <h3>مراكز صيانة معتمدة وقطع أصلية</h3>
+            <p>ورش معتمدة من تويوتا مع استخدام قطع غيار أصلية للحفاظ على سيارتك.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">3</div>
+            <h3>عروض تمويل مرنة</h3>
+            <p>برامج تقسيط وتمويل متنوعة تناسب ميزانيتك وتسهّل امتلاك السيارة.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">4</div>
+            <h3>ضمان موثوق وممدد</h3>
+            <p>ضمان أساسي مع إمكانية تمديده لسنوات إضافية لراحة بالك.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">5</div>
+            <h3>شبكة فروع واسعة</h3>
+            <p>فروع وخدمات في أغلب مدن ومناطق المملكة لخدمتك أينما كنت.</p>
+          </div>
+
+          <div class="benefit-card">
+            <div class="benefit-icon">6</div>
+            <h3>خدمات ما بعد البيع</h3>
+            <p>متابعة دورية، عروض خاصة، ودعم مستمر لعملائنا الحاليين.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <p>© وكالة تويوتا — جميع الحقوق محفوظة</p>
+      <nav class="footer-nav">
+        <a href="about.html">عن الوكالة</a>
+        <a href="register.html">التواصل</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

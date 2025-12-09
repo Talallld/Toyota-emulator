@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>وكالة تويوتا - التسجيل</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="register.html" class="active">التسجيل</a></li>
+          <li><a href="cars.html">سياراتنا</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="gbs.html">موقعنا</a></li>
+        </ul>
+      </nav>
+
+      <a class="brand" href="index.html" aria-label="وكالة تويوتا">
+        <img src="Toyota_logo_(Red).svg" alt="Toyota" class="brand-logo">
+      </a>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- محتوى فاضي، بس عنوان بسيط الآن -->
+    <section class="hero">
+      <h1>احجز تجربة قيادة</h1>
+
+    </section>
+  </main>
+<form action="main.php" method="POST">
+  <div id="car-div" style="float:left; margin-right:50px; display:none;">
+  <img id="car-img" src="" alt="صورة السيارة" width="400">
+</div>
+      <table>
+        <tr>
+          <td><label>الاسم الكامل:</label></td>
+          <td><input type="text" name="full_name" required></td>
+        </tr>
+
+        <tr>
+          <td><label>رقم الجوال:</label></td>
+          <td><input type="tel" name="phone" placeholder="05XXXXXXXX" required></td>
+        </tr>
+
+        <tr>
+          <td><label>البريد الإلكتروني:</label></td>
+          <td><input type="email" name="email" placeholder="name@example.com" required></td>
+        </tr>
+
+        <tr>
+  <td><label>اختر السيارة:</label></td>
+  <td>
+    <select name="car" id="car-select" required>
+      <option value="" disabled selected>اختر السيارة</option>
+      <option value="Camry">Camry</option>
+      <option value="Corolla">Corolla</option>
+      <option value="Crown">Crown</option>
+      <option value="Supra">Supra</option>
+      <option value="gr86">gr86</option>
+      <option value="Land Cruiser">Land Cruiser</option>
+      <option value="Land Cruiser Prado">Land Cruiser Prado</option>
+      <option value="Fortuner">Fortuner</option>
+      <option value="yaris">yaris</option>
+    </select>
+
+    
+  </td>
+</tr>
+
+
+
+
+
+
+        <tr>
+          <td><label>المدينة:</label></td>
+          <td>
+            <select name="city" required>
+              <option value="" disabled selected>اختر المدينة</option>
+              <option>الرياض</option>
+              <option>جدة</option>
+              <option>الدمام</option>
+              <option>مكة</option>
+              <option>المدينة المنورة</option>
+              <option>أبها</option>
+              <option>الطائف</option>
+              <option>حائل</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label>وقت التجربة:</label></td>
+          <td>
+            <select name="time" required>
+              <option value="" disabled selected>اختر الوقت</option>
+              <option>الصباح</option>
+              <option>الظهر</option>
+              <option>المساء</option>
+            </select>
+          </td>
+        </tr>
+
+        <tr>
+          <td><label>تاريخ مناسب للتجربة:</label></td>
+          <td><input type="date" name="date" required></td>
+        </tr>
+
+        <tr>
+          <td><label>ملاحظات (اختياري):</label></td>
+          <td><textarea name="notes" placeholder="اكتب أي تفاصيل اضافية..."></textarea></td>
+        </tr>
+
+        <tr>
+          <td colspan="2">
+            <button type="submit" class="btn-primary">إرسال الطلب</button>
+            <input type="reset" value="إعادة تعيين">
+          </td>
+        </tr>
+      </table>
+      <script>
+  const carSelect = document.getElementById('car-select');
+  const carImg = document.getElementById('car-img');
+  const carDiv = document.getElementById('car-div');
+
+  const carImages = {
+    "Camry": "camry-2025.png",
+    "Corolla": "corolla-2025.png",
+    "Crown": "crown-2025.png",
+    "Supra": "supra-gr-2025.png",
+    "gr86": "gr86-2025.png",
+    "Land Cruiser": "landcruiser-2025.png",
+    "Land Cruiser Prado": "prado-2025.png",
+    "Fortuner": "fortuner-2025.png",
+    "yaris": "yaris-2025.png"
+  };
+
+  carSelect.addEventListener('change', () => {
+    const selectedCar = carSelect.value;
+    if(carImages[selectedCar]){
+      carImg.src = carImages[selectedCar];
+      carDiv.style.display = "block"; 
+    } else {
+      carImg.src = "";
+      carDiv.style.display = "none"; 
+    }
+  });
+</script>
+    </form>
+    
+  <footer class="footer">
+    <div class="container footer-grid">
+      <p>© وكالة تويوتا — جميع الحقوق محفوظة</p>
+      <nav class="footer-nav">
+        <a href="about.html">عن الوكالة</a>
+        <a href="register.html">التواصل</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

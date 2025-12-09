@@ -1,0 +1,331 @@
+body {
+  margin: 0;
+  font-family: "Cairo", sans-serif;
+  background-color: lightgray;
+  color: black;
+  direction: rtl;
+}
+
+.topbar {
+  background-color: gray;
+  color: white;
+  padding: 10px 0;
+}
+
+.nav-wrap {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-logo {
+  width: 100px;
+  height: auto;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.nav-list a:hover {
+  background-color: red;
+}
+
+.nav-list a.active {
+  background-color: red;
+}
+
+main {
+  width: 90%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: gray;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn.primary {
+  background-color: red;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: darkred;
+}
+
+.btn.outline {
+  border: 2px solid red;
+  color: red;
+  background-color: transparent;
+}
+
+.btn.outline:hover {
+  background-color: red;
+  color: white;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+  text-align: right;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.footer {
+  background-color: gray;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.cars-container {
+  width: 90%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.car-category {
+  margin-bottom: 40px;
+  text-align: right;
+}
+
+.car-category h2 {
+  margin-bottom: 20px;
+  color: red;
+  text-align: center;
+}
+
+.cars-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.car-card {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 6px;
+  width: 260px;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+.car-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.car-image {
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+  margin: 0 auto;
+}
+
+.car-name {
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.viewer-container {
+  width: 90%;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.viewer-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: gray;
+}
+
+model-viewer {
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-color: #ddd;
+}
+
+.heor-slider {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  background: #111;
+  margin-bottom: 40px;
+}
+
+.heor-slider .slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.heor-slider .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.heor-slider .slide.active {
+  opacity: 1;
+}
+
+.heor-slider .slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.heor-slider .hero-text {
+  display: none;
+}
+
+.heor-slider .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heor-slider .arrow.left {
+  left: 15px;
+}
+
+.heor-slider .arrow.right {
+  right: 15px;
+}
+
+.heor-slider .dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 18px;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.heor-slider .dots div {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+.heor-slider .dots .active {
+  background: #e30613;
+}
+
+.home-benefits {
+  background: #d3d3d3;
+  padding: 40px 0 60px;
+}
+
+.home-benefits-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.home-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.benefit-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 18px 16px 22px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.benefit-icon {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: #e30613;
+  color: #ffffff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefit-card h3 {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.benefit-card p {
+  font-size: 14px;
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+

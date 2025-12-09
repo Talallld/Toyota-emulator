@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>يارس 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+.car-slider {
+    text-align: center;
+    position: relative;
+    margin: 50px auto;
+    width: 95%;
+    max-width: 1100px;
+    font-family: "Tajawal", sans-serif;
+}
+
+.arrow {
+    background: #ccc;
+    border: none;
+    padding: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 60px;
+}
+
+.left { left: 0; }
+.right { right: 0; }
+
+.car-options {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    position: relative;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+}
+
+.option {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.option.active {
+    color: #d00;
+}
+
+.underline {
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background: #d00;
+    width: 120px;
+    transition: 0.3s;
+}
+
+.car-info {
+    margin-top: 25px;
+    font-size: 22px;
+    line-height: 1.8;
+}
+
+#car-price {
+    color: #d00;
+    font-weight: bold;
+}
+
+    .viewer-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 40px auto 100px;
+      text-align: center;
+    }
+
+    .viewer-title {
+      margin-bottom: 25px;
+      font-size: 26px;
+      color: gray;
+    }
+
+    .sketchfab-frame {
+      width: 100%;
+      height: 650px;
+      border: 0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="register.html">التسجيل</a></li>
+          <li><a href="cars.html" class="active">سياراتنا</a></li>
+          <li><a href="about.html">من نحن</a></li>
+          <li><a href="gbs.html">موقعنا</a></li>
+        </ul>
+      </nav>
+
+      <a class="brand" href="index.html" aria-label="وكالة تويوتا">
+        <img src="Toyota_logo_(Red).svg" alt="Toyota" class="brand-logo">
+      </a>
+    </div>
+  </header>
+
+  <main class="viewer-container">
+    <h1 class="viewer-title">يارس 2025</h1>
+
+    <iframe
+      class="sketchfab-frame"
+      title="Yaris 2025"
+      frameborder="0"
+      allowfullscreen
+      mozallowfullscreen="true"
+      webkitallowfullscreen="true"
+      src="https://sketchfab.com/models/7fb426d6ba06419db9299ab9836d1562/embed?autostart=1&preload=1&ui_infos=0&ui_controls=0&ui_hint=0&ui_annotations=0&ui_fullscreen=0&ui_help=0&ui_settings=0&ui_vr=0&ui_stop=0&ui_inspector=0">
+    </iframe>
+  </main>
+<div class="car-slider">
+
+    <button class="arrow right" onclick="prevCar()">&#10094;</button>
+
+    <div class="car-options">
+        <div class="option" onclick="selectCar(0)">1.3L STD</div>
+        <div class="option" onclick="selectCar(1)">1.3L Y</div>
+        <div class="option" onclick="selectCar(2)">1.5L Y PLUS</div>
+        <div class="option" onclick="selectCar(3)">1.5L SPORT</div>
+
+        <div class="underline"></div>
+    </div>
+
+    <button class="arrow left" onclick="nextCar()">&#10095;</button>
+
+    <div class="car-info">
+        <h3 id="car-name">1.3L STD</h3>
+        <p id="car-price">السعر: 58,900 ﷼</p>
+        <p id="car-specs">المحرك: 1.3 لتر، 4 سلندر<br>القوة: 97 حصان</p>
+    </div>
+
+</div>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <p>© وكالة تويوتا — جميع الحقوق محفوظة</p>
+      <nav class="footer-nav">
+        <a href="about.html">عن الوكالة</a>
+        <a href="register.html">التواصل</a>
+      </nav>
+    </div>
+  </footer>
+<script>
+let cars = [
+    {
+        name: "YARIS 1.3L STD 2025",
+        price: "58,900 ﷼",
+        specs: "المحرك: 1.3 لتر 4 سلندر<br>القوة: 97 حصان<br>قير CVT"
+    },
+    {
+        name: "YARIS 1.3L Y 2025",
+        price: "63,500 ﷼",
+        specs: "شاشة 8 إنش<br>حساسات خلفية<br>تحكم بالمقود"
+    },
+    {
+        name: "YARIS 1.5L Y PLUS 2025",
+        price: "70,900 ﷼",
+        specs: "المحرك: 1.5 لتر 4 سلندر<br>القوة: 105 حصان<br>جنوط ألمنيوم"
+    },
+    {
+        name: "YARIS 1.5L SPORT 2025",
+        price: "75,000 ﷼",
+        specs: "شبك رياضي<br>جنوط 16 إنش<br>أنوار LED"
+    }
+];
+
+let current = 0;
+
+function updateSlider() {
+    document.getElementById("car-name").innerHTML = cars[current].name;
+    document.getElementById("car-price").innerHTML = "السعر: " + cars[current].price;
+    document.getElementById("car-specs").innerHTML = cars[current].specs;
+
+    let buttons = document.querySelectorAll(".option");
+    buttons.forEach(b => b.classList.remove("active"));
+    buttons[current].classList.add("active");
+
+    let underline = document.querySelector(".underline");
+    underline.style.left = buttons[current].offsetLeft + "px";
+    underline.style.width = buttons[current].offsetWidth + "px";
+}
+
+function selectCar(index) {
+    current = index;
+    updateSlider();
+}
+
+function nextCar() {
+    current = (current + 1) % cars.length;
+    updateSlider();
+}
+
+function prevCar() {
+    current = (current - 1 + cars.length) % cars.length;
+    updateSlider();
+}
+
+window.onload = updateSlider;
+</script>
+
+</body>
+</html>

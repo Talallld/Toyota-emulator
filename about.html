@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>وكالة تويوتا - من نحن</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .about-hero {
+      position: relative;
+      width: 100%;
+      min-height: 260px;
+      background: url("hero1.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 70px 20px;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .about-hero-overlay {
+      background: rgba(0, 0, 0, 0.55);
+      padding: 30px 40px;
+      border-radius: 14px;
+      max-width: 820px;
+    }
+
+    .about-hero h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .about-hero p {
+      margin: 0;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .about-history {
+      padding: 40px 0 50px;
+      background: #d3d3d3;
+    }
+
+    .about-history h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 30px;
+      color: #555555;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .timeline-item {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 18px 16px 22px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+    .timeline-item:nth-child(2) { animation-delay: 0.25s; }
+    .timeline-item:nth-child(3) { animation-delay: 0.4s; }
+    .timeline-item:nth-child(4) { animation-delay: 0.55s; }
+
+    .timeline-year {
+      color: #e30613;
+      font-weight: 700;
+      margin-bottom: 4px;
+      font-size: 15px;
+    }
+
+    .timeline-title {
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: #444444;
+    }
+
+    .timeline-text {
+      font-size: 14px;
+      color: #666666;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .about-media {
+      padding: 40px 0 70px;
+      background: #e2e2e2;
+    }
+
+    .about-media h2 {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 25px;
+      color: #555555;
+    }
+
+    .about-media-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 20px;
+    }
+
+    .media-video {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .media-video video {
+      width: 100%;
+      height: 260px;
+      border-radius: 8px;
+      display: block;
+      background: #000000;
+      object-fit: cover;
+    }
+
+    .media-video h3 {
+      font-size: 16px;
+      margin: 0;
+      color: #444444;
+      text-align: center;
+    }
+
+    .media-video p {
+      margin: 0;
+      font-size: 14px;
+      color: #666666;
+      text-align: center;
+    }
+
+    .media-images {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .media-card {
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+
+    .media-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .media-card p {
+      margin: 0;
+      padding: 10px 12px 14px;
+      font-size: 14px;
+      color: #555555;
+      text-align: center;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .about-media-grid {
+        grid-template-columns: 1fr;
+      }
+      .media-video video {
+        height: 220px;
+      }
+      .media-card img {
+        height: 190px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav-wrap">
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="register.html">التسجيل</a></li>
+          <li><a href="cars.html">سياراتنا</a></li>
+          <li><a href="about.html" class="active">من نحن</a></li>
+          <li><a href="gbs.html">موقعنا</a></li>
+        </ul>
+      </nav>
+
+      <a class="brand" href="index.html" aria-label="وكالة تويوتا">
+        <img src="Toyota_logo_(Red).svg" alt="Toyota" class="brand-logo">
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-hero">
+      <div class="about-hero-overlay">
+        <h1>من نحن</h1>
+        <p>
+          وكالة تويوتا تهدف إلى تقديم تجربة قيادة موثوقة تجمع بين الجودة اليابانية
+          والخدمة المحلية المميزة. نحرص على توفير أحدث موديلات تويوتا وخدمات متكاملة
+          من البيع إلى ما بعد البيع، لنكون شريكك على الطريق في كل رحلة.
+        </p>
+      </div>
+    </section>
+
+    <section class="about-history">
+      <div class="container">
+        <h2>لمحة سريعة عن تاريخ تويوتا</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1937</div>
+            <div class="timeline-title">تأسيس شركة تويوتا</div>
+            <p class="timeline-text">
+              تأسست تويوتا في اليابان وبدأت رحلتها في صناعة السيارات مع التركيز على
+              الاعتمادية والجودة في كل مركبة يتم إنتاجها.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">1950s - 1970s</div>
+            <div class="timeline-title">الانتشار العالمي</div>
+            <p class="timeline-text">
+              توسعت تويوتا إلى الأسواق العالمية، وأصبحت سياراتها رمزًا للاقتصاد في
+              استهلاك الوقود وطول العمر وجودة التصنيع.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">1997</div>
+            <div class="timeline-title">ريادة السيارات الهجينة</div>
+            <p class="timeline-text">
+              أطلقت تويوتا بريوس كأول سيارة هجينة على نطاق واسع، لتقود التحول نحو
+              حلول أكثر استدامة تحافظ على البيئة.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-year">اليوم</div>
+            <div class="timeline-title">ابتكار مستمر وخدمة متكاملة</div>
+            <p class="timeline-text">
+              تواصل تويوتا تطوير تقنيات السلامة والراحة والأداء، ومع وكالتنا نوفر
+              لك تجربة شراء وصيانة سهلة وحديثة تلائم احتياجاتك اليومية.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-media">
+      <div class="container">
+        <h2>معرض الصور والفيديو</h2>
+
+        <div class="about-media-grid">
+          <!-- مشغل الفيديو المحلي -->
+          <div class="media-video">
+            <video controls poster="hero1.jpg">
+              <source src="showroom.mp4" type="video/mp4">
+              متصفحك لا يدعم تشغيل الفيديو.
+            </video>
+            <h3>جولة سريعة في الوكالة</h3>
+            <p>
+              شاهد جولة تعريفية على صالة العرض ومراكز الخدمة، وتعرّف أكثر على
+              الخدمات التي نقدمها لعملائنا في جميع المراحل.
+            </p>
+          </div>
+
+          <!-- الصور الجانبية -->
+          <div class="media-images">
+            <div class="media-card">
+              <img src="hero2.jpg" alt="صالة عرض تويوتا">
+              <p>صالة عرض حديثة تستعرض أحدث موديلات تويوتا.</p>
+            </div>
+
+            <div class="media-card">
+              <img src="hero3.jpg" alt="مراكز صيانة تويوتا">
+              <p>مراكز صيانة معتمدة مع فريق متخصص وخبرة طويلة.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <p>© وكالة تويوتا — جميع الحقوق محفوظة</p>
+      <nav class="footer-nav">
+        <a href="about.html">عن الوكالة</a>
+        <a href="register.html">التواصل</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
